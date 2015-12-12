@@ -115,3 +115,13 @@ double tanh(double x)
 {
 	return __builtin_tanh(x);
 }
+
+double trunc(double x)
+{
+	return __builtin_trunc(x);
+}
+
+float truncf(float x)
+{
+	return __builtin_truncf(x);
+}
