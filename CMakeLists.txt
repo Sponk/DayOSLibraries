@@ -13,5 +13,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED on)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED on)
 
+add_subdirectory(libmath)
 add_subdirectory(libdayos)
 add_subdirectory(crt0)
+add_subdirectory(libcxxrt)
+add_subdirectory(libustl)

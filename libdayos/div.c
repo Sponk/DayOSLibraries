@@ -41,22 +41,22 @@ int atexit(void (*func)(void))
 
 float atof(const char* str)
 {
-	return __builtin_atof(str);
+	//return __builtin_atof(str);
 }
 
 int atoi(const char* str)
 {
-	return __builtin_atoi(str);
+	//return __builtin_atoi(str);
 }
 
 long atol(const char* str)
 {
-	return __builtin_atol(str);
+	//return __builtin_atol(str);
 }
 
 unsigned long int strtoul(const char* str, char** endptr, int base)
 {
-	return __builtin_strtoul(str, endptr, base);
+	// return __builtin_strtoul(str, endptr, base);
 }
 
 void* bsearch (const void* key, const void* base,

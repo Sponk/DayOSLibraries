@@ -19,10 +19,14 @@ void _start()
 	setup_stack_chk();
 	InitHeap();
 	
+	pid_t vfs_service = get_service_pid("vfs");
 	// FIXME: Get from kernel somehow!
-	stdin = fopen("/dayos/dev/tty", "r");
-	stdout = fopen("/dayos/dev/tty", "w");
-	stderr = stdout;
+	if(vfs_service)
+	{
+		stdin = fopen("/dayos/dev/tty", "r");
+		stdout = fopen("/dayos/dev/tty", "w");
+		stderr = fopen("/dayos/dev/tty", "w");
+	}
 	
 	run_constructors();
 	int retval = main(0, NULL);

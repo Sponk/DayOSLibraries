@@ -4,7 +4,7 @@ set(CMAKE_C_FLAGS -m32 -Wall -g -fstack-protector-all -nostdinc -std=c11)
 #add_library(crtbegin.o OBJECT cpp_crt.c)
 #add_library(crtend.o OBJECT empty.c)
 
-set(INCLUDES -I${DAYOS_KERNEL_INCLUDE} -I${CMAKE_CURRENT_SOURCE_DIR}/../libdayos/include)
+set(INCLUDES -I${DAYOS_KERNEL_INCLUDE} -I${CMAKE_CURRENT_SOURCE_DIR}/../libdayos/include -I${DAYOS_KERNEL_INCLUDE})
 
 add_custom_target(crt0 ALL ${CMAKE_C_COMPILER} ${CMAKE_C_FLAGS} ${INCLUDES} -o "${CMAKE_BINARY_DIR}/crt0.o" -c "${CMAKE_CURRENT_SOURCE_DIR}/crt0.c")
 

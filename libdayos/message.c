@@ -59,12 +59,11 @@ int read_message_stream(void* data, size_t size, pid_t who)
 }
 
 #include <stdio.h>
-#include <math.h>
 
 int write_message_stream(const char* data, size_t size, pid_t who)
 {
 	message_t msg;
-	size_t num_messages = floor(size / MESSAGE_STRING_SIZE);
+	size_t num_messages = (size_t)((float)size / MESSAGE_STRING_SIZE);
 	size_t remaining_bytes = size % MESSAGE_STRING_SIZE;
 	
 	// printf("%d %d\n", num_messages, remaining_bytes);
